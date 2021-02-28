@@ -21,6 +21,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    transition: background-color 4s;
 }
 
 .skybox.dark {
@@ -33,6 +34,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 4s;
 }
 
 .ground.dark {
@@ -77,14 +79,41 @@ html {
     height: 20rem;
     width: 30rem;
     background-color: brown;
+    display: flex;
+    flex-direction: column;
 }
 
 .roof {
     position: absolute;
-    border: 200px solid transparent;
+    border: 170px solid transparent;
     border-bottom-color: black;
-    bottom: 160px;
-    right: -50px;
+    bottom: 185px;
+    right: -20px;
+}
+
+.upper,
+.lower {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50%;
+}
+
+.window {
+    height: 4rem;
+    width: 5rem;
+    background-color: white;
+}
+
+.upper .window {
+    align-self: flex-end;
+}
+
+.door {
+    height: 6rem;
+    width: 4rem;
+    background-color: black;
+    align-self: flex-end;
 }
 
 /* 
