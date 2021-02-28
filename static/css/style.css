@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    font-size: 62.5%;
+  }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.skybox {
+    background-image: linear-gradient(180deg, #0164d4, #168ddd);
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.ground {
+    background-image: linear-gradient(180deg, #0a5f00, #13b100);
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.house {
+    position: relative;
+    height: 20rem;
+    width: 30rem;
+    background-color: brown;
+}
+
+.roof {
+    position: absolute;
+    border: 200px solid transparent;
+    border-bottom-color: black;
+    bottom: 160px;
+    right: -50px;
+}
+
+.time {
+    font-size: 8rem;
+    color: #fff;
+}
+
