@@ -15,6 +15,13 @@ function getTime() {
     let minutes = d.getMinutes();
     let seconds = d.getSeconds();
 
+    // Update sun and moon position, plus backgrounds based on time
+    if (hours < 6 || hours > 18) {
+        toggleNight();
+    } else {
+        toggleDay();
+    }
+
     if (hours < 10) {
         hours = `0${hours}`;
     }
@@ -38,6 +45,28 @@ function displayDateTime() {
     const date = document.querySelector(".date");
     clockTime.innerHTML = currentTime;
     date.innerHTML = currentDate;
+}
+
+function toggleDay() {
+    const sky = document.querySelector(".skybox");
+    const ground = document.querySelector(".ground");
+    const sun = document.querySelector(".sun");
+    const moon = document.querySelector(".moon");
+    sky.classList.remove("dark");
+    ground.classList.remove("dark");
+    sun.classList.remove("inactive");
+    moon.classList.add("inactive");
+}
+
+function toggleNight() {
+    const sky = document.querySelector(".skybox");
+    const ground = document.querySelector(".ground");
+    const sun = document.querySelector(".sun");
+    const moon = document.querySelector(".moon");
+    sky.classList.add("dark");
+    ground.classList.add("dark");
+    sun.classList.add("inactive");
+    moon.classList.remove("inactive");
 }
 
 window.setInterval(displayDateTime, 1000);
