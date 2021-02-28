@@ -42,8 +42,20 @@ html {
     right: -50px;
 }
 
+.clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .time {
     font-size: 8rem;
+    color: #fff;
+}
+
+.date {
+    font-size: 2rem;
     color: #fff;
 }
 
