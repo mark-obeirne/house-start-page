@@ -1,3 +1,12 @@
+function search() {
+    const searchbar = document.querySelector(".search input");
+    if (searchbar.value) {
+        const query = searchbar.value;
+        const url = `https://www.google.com/search?q=${query}`;
+        window.open(url);
+    }
+}
+
 function getDate() {
     const d = new Date();
     const year = d.getFullYear()
@@ -70,3 +79,8 @@ function toggleNight() {
 }
 
 window.setInterval(displayDateTime, 1000);
+document.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        search(e);
+    }
+});
