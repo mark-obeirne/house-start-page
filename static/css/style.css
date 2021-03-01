@@ -25,6 +25,7 @@ html {
     justify-content: center;
     align-items: flex-end;
     transition: background-color 4s;
+    z-index: -10;
 }
 
 .skybox.dark {
@@ -39,6 +40,7 @@ html {
     justify-content: center;
     align-items: center;
     transition: background-color 4s;
+    z-index: 2;
 }
 
 .ground.dark {
@@ -71,7 +73,7 @@ html {
 
 .sun.inactive,
 .moon.inactive {
-    top: 40%;
+    top: 55%;
     z-index: -5;
 }
 
@@ -106,11 +108,17 @@ html {
 .window {
     height: 4rem;
     width: 5rem;
-    background-color: #fff;
+    background-color: rgb(149, 203, 248);
+    box-shadow: 0 0 0 2px #fff;
 }
 
 .upper .window {
     align-self: flex-end;
+}
+
+.upper .window:nth-of-type(2) {
+    height: 5rem;
+    border-radius: 50%;
 }
 
 .door {
