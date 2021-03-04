@@ -37,6 +37,30 @@
             <div class="sun"></div>
             <div class="moon inactive"></div>
         </div>
+        <script>
+            if (navigator.geolocation) {
+                console.log("Geolocation a-OK")
+                navigator.geolocation.getCurrentPosition(async position => {
+                    const lat = position.coords.latitude;
+                    const long = position.coords.longitude;
+                    console.log(position);
+
+                    const data = {lat, long};
+                    const options = {
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        method: "POST",
+                        body: JSON.stringify(data),
+                    }
+                    const response = await fetch("/api", options)
+                    const json = await response.json();
+                    console.log(json);
+                })
+            } else {
+                console.log("Geolocation not available");
+            }
+        </script>
         <script src="static/js/script.js" async defer></script>
     </body>
 </html>
