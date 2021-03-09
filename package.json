@@ -1,0 +1,24 @@
+{
+  "name": "house-start-page",
+  "version": "1.0.0",
+  "description": "A simple cartoon start page displaying the time and day/night cycle",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark-obeirne/house-start-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mark-obeirne/house-start-page/issues"
+  },
+  "homepage": "https://github.com/mark-obeirne/house-start-page#readme"
+}
