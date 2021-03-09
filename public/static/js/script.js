@@ -78,6 +78,24 @@ function toggleNight() {
     moon.classList.remove("inactive");
 }
 
+(function() {
+    if (navigator.geolocation) {
+        console.log("Geolocation a-OK")
+        navigator.geolocation.getCurrentPosition(async position => {
+            const lat = position.coords.latitude;
+            const long = position.coords.longitude;
+            const apiUrl = `weather/${lat},${long}`;
+            
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+            console.log(data);
+            console.table(data.weather[0].description, data.main.temp, data.main.feels_like, data.wind.speed)
+        })
+    } else {
+        console.log("Geolocation not available");
+    }
+})();
+
 window.setInterval(displayDateTime, 1000);
 document.addEventListener("keypress", function(e) {
     if (e.key === "Enter") {
