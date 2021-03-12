@@ -61,6 +61,10 @@ function toggleDay() {
     const ground = document.querySelector(".ground");
     const sun = document.querySelector(".sun");
     const moon = document.querySelector(".moon");
+    const house = document.querySelector(".house");
+    const window = document.querySelectorAll(".window");
+    house.classList.remove("dark");
+    window.forEach(item => item.classList.remove("dark"));
     sky.classList.remove("dark");
     ground.classList.remove("dark");
     sun.classList.remove("inactive");
@@ -72,6 +76,10 @@ function toggleNight() {
     const ground = document.querySelector(".ground");
     const sun = document.querySelector(".sun");
     const moon = document.querySelector(".moon");
+    const house = document.querySelector(".house");
+    const window = document.querySelectorAll(".window");
+    house.classList.add("dark");
+    window.forEach(item => item.classList.add("dark"));
     sky.classList.add("dark");
     ground.classList.add("dark");
     sun.classList.add("inactive");
