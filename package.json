@@ -4,6 +4,7 @@
   "description": "A simple cartoon start page displaying the time and day/night cycle",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1"
   },

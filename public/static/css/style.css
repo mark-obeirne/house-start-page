@@ -24,7 +24,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    transition: background-color 4s;
+    transition: all 4s;
     z-index: -10;
 }
 
@@ -39,7 +39,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: background-color 4s;
+    transition: all 4s;
     z-index: 2;
 }
 
@@ -57,7 +57,7 @@ html {
     border-radius: 50%;
     position: absolute;
     top: 10%;    
-    transition: all 2s;
+    transition: top 2s;
     transition-timing-function: cubic-bezier(0.1, 0.9, 0.95, 1);
 }
 
@@ -89,6 +89,10 @@ html {
     flex-direction: column;
 }
 
+.house.dark {
+    background-color: rgb(163 94 94);
+}
+
 .roof {
     position: absolute;
     border: 170px solid transparent;
@@ -110,6 +114,11 @@ html {
     width: 5rem;
     background-color: rgb(149, 203, 248);
     box-shadow: 0 0 0 2px #fff;
+}
+
+.window.dark {
+    background-color: rgb(83 111 135);
+    box-shadow: 0 0 0 2px #848484;
 }
 
 .upper .window {
